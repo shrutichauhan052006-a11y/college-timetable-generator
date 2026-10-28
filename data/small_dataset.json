@@ -1,0 +1,473 @@
+{
+  "schema_version": "1.0",
+  "description": "Synthetic example dataset with a deterministic reference timetable witness.",
+  "subjects": [
+    {
+      "code": "MTH",
+      "name": "Mathematics",
+      "kind": "theory",
+      "session_length": 1
+    },
+    {
+      "code": "PRG",
+      "name": "Programming",
+      "kind": "theory",
+      "session_length": 1
+    },
+    {
+      "code": "DBS",
+      "name": "Database Systems",
+      "kind": "theory",
+      "session_length": 1
+    },
+    {
+      "code": "PHY",
+      "name": "Physics Lab",
+      "kind": "lab",
+      "session_length": 2
+    },
+    {
+      "code": "CSE",
+      "name": "Computer Lab",
+      "kind": "lab",
+      "session_length": 2
+    }
+  ],
+  "teachers": [
+    {
+      "name": "Teacher 01",
+      "qualified_subjects": [
+        "DBS",
+        "MTH"
+      ],
+      "unavailable_slots": [
+        {
+          "day": "Tue",
+          "period": 5
+        }
+      ],
+      "preferred_slots": [
+        {
+          "day": "Mon",
+          "period": 0
+        }
+      ],
+      "max_weekly_load": 25
+    },
+    {
+      "name": "Teacher 02",
+      "qualified_subjects": [
+        "PRG"
+      ],
+      "unavailable_slots": [
+        {
+          "day": "Wed",
+          "period": 5
+        }
+      ],
+      "preferred_slots": [
+        {
+          "day": "Tue",
+          "period": 0
+        }
+      ],
+      "max_weekly_load": 25
+    },
+    {
+      "name": "Teacher 03",
+      "qualified_subjects": [
+        "DBS"
+      ],
+      "unavailable_slots": [
+        {
+          "day": "Thu",
+          "period": 5
+        }
+      ],
+      "preferred_slots": [
+        {
+          "day": "Wed",
+          "period": 0
+        }
+      ],
+      "max_weekly_load": 25
+    },
+    {
+      "name": "Teacher 04",
+      "qualified_subjects": [
+        "PHY"
+      ],
+      "unavailable_slots": [
+        {
+          "day": "Fri",
+          "period": 5
+        }
+      ],
+      "preferred_slots": [
+        {
+          "day": "Thu",
+          "period": 0
+        }
+      ],
+      "max_weekly_load": 25
+    },
+    {
+      "name": "Teacher 05",
+      "qualified_subjects": [
+        "CSE"
+      ],
+      "unavailable_slots": [
+        {
+          "day": "Mon",
+          "period": 5
+        }
+      ],
+      "preferred_slots": [
+        {
+          "day": "Fri",
+          "period": 0
+        }
+      ],
+      "max_weekly_load": 25
+    },
+    {
+      "name": "Teacher 06",
+      "qualified_subjects": [
+        "MTH"
+      ],
+      "unavailable_slots": [
+        {
+          "day": "Tue",
+          "period": 5
+        }
+      ],
+      "preferred_slots": [
+        {
+          "day": "Mon",
+          "period": 0
+        }
+      ],
+      "max_weekly_load": 25
+    }
+  ],
+  "classes": [
+    {
+      "name": "Class 01",
+      "strength": 28,
+      "subject_periods": {
+        "MTH": 2,
+        "PRG": 2,
+        "DBS": 2,
+        "PHY": 2,
+        "CSE": 2
+      },
+      "lunch_period": 3
+    },
+    {
+      "name": "Class 02",
+      "strength": 32,
+      "subject_periods": {
+        "MTH": 2,
+        "PRG": 2,
+        "DBS": 2,
+        "PHY": 2,
+        "CSE": 2
+      },
+      "lunch_period": 3
+    },
+    {
+      "name": "Class 03",
+      "strength": 36,
+      "subject_periods": {
+        "MTH": 2,
+        "PRG": 2,
+        "DBS": 2,
+        "PHY": 2,
+        "CSE": 2
+      },
+      "lunch_period": 3
+    }
+  ],
+  "rooms": [
+    {
+      "name": "Room 01",
+      "capacity": 60,
+      "kind": "classroom"
+    },
+    {
+      "name": "Room 02",
+      "capacity": 60,
+      "kind": "classroom"
+    },
+    {
+      "name": "Lab Room 01",
+      "capacity": 40,
+      "kind": "lab"
+    },
+    {
+      "name": "Lab Room 02",
+      "capacity": 40,
+      "kind": "lab"
+    }
+  ],
+  "time": {
+    "working_days": [
+      "Mon",
+      "Tue",
+      "Wed",
+      "Thu",
+      "Fri"
+    ],
+    "periods_per_day": 6,
+    "break_slots": []
+  },
+  "soft_weights": {
+    "S1": 2,
+    "S2": 3,
+    "S3": 10,
+    "S4": 1,
+    "S5": 1
+  },
+  "verification_witness": [
+    {
+      "session_id": "S0001",
+      "class_name": "Class 01",
+      "subject_code": "CSE",
+      "teacher_name": "Teacher 05",
+      "room_name": "Lab Room 01",
+      "day": "Mon",
+      "start_period": 0,
+      "duration": 2
+    },
+    {
+      "session_id": "S0002",
+      "class_name": "Class 01",
+      "subject_code": "PHY",
+      "teacher_name": "Teacher 04",
+      "room_name": "Lab Room 01",
+      "day": "Mon",
+      "start_period": 4,
+      "duration": 2
+    },
+    {
+      "session_id": "S0003",
+      "class_name": "Class 02",
+      "subject_code": "CSE",
+      "teacher_name": "Teacher 05",
+      "room_name": "Lab Room 01",
+      "day": "Tue",
+      "start_period": 0,
+      "duration": 2
+    },
+    {
+      "session_id": "S0004",
+      "class_name": "Class 02",
+      "subject_code": "PHY",
+      "teacher_name": "Teacher 04",
+      "room_name": "Lab Room 02",
+      "day": "Mon",
+      "start_period": 0,
+      "duration": 2
+    },
+    {
+      "session_id": "S0005",
+      "class_name": "Class 03",
+      "subject_code": "CSE",
+      "teacher_name": "Teacher 05",
+      "room_name": "Lab Room 01",
+      "day": "Tue",
+      "start_period": 4,
+      "duration": 2
+    },
+    {
+      "session_id": "S0006",
+      "class_name": "Class 03",
+      "subject_code": "PHY",
+      "teacher_name": "Teacher 04",
+      "room_name": "Lab Room 02",
+      "day": "Tue",
+      "start_period": 0,
+      "duration": 2
+    },
+    {
+      "session_id": "S0007",
+      "class_name": "Class 01",
+      "subject_code": "DBS",
+      "teacher_name": "Teacher 01",
+      "room_name": "Room 01",
+      "day": "Mon",
+      "start_period": 2,
+      "duration": 1
+    },
+    {
+      "session_id": "S0008",
+      "class_name": "Class 01",
+      "subject_code": "DBS",
+      "teacher_name": "Teacher 01",
+      "room_name": "Room 01",
+      "day": "Tue",
+      "start_period": 0,
+      "duration": 1
+    },
+    {
+      "session_id": "S0009",
+      "class_name": "Class 01",
+      "subject_code": "MTH",
+      "teacher_name": "Teacher 01",
+      "room_name": "Room 01",
+      "day": "Tue",
+      "start_period": 1,
+      "duration": 1
+    },
+    {
+      "session_id": "S0010",
+      "class_name": "Class 01",
+      "subject_code": "MTH",
+      "teacher_name": "Teacher 01",
+      "room_name": "Room 01",
+      "day": "Tue",
+      "start_period": 2,
+      "duration": 1
+    },
+    {
+      "session_id": "S0011",
+      "class_name": "Class 01",
+      "subject_code": "PRG",
+      "teacher_name": "Teacher 02",
+      "room_name": "Room 01",
+      "day": "Tue",
+      "start_period": 4,
+      "duration": 1
+    },
+    {
+      "session_id": "S0012",
+      "class_name": "Class 01",
+      "subject_code": "PRG",
+      "teacher_name": "Teacher 02",
+      "room_name": "Room 01",
+      "day": "Tue",
+      "start_period": 5,
+      "duration": 1
+    },
+    {
+      "session_id": "S0013",
+      "class_name": "Class 02",
+      "subject_code": "DBS",
+      "teacher_name": "Teacher 03",
+      "room_name": "Room 02",
+      "day": "Mon",
+      "start_period": 2,
+      "duration": 1
+    },
+    {
+      "session_id": "S0014",
+      "class_name": "Class 02",
+      "subject_code": "DBS",
+      "teacher_name": "Teacher 01",
+      "room_name": "Room 01",
+      "day": "Mon",
+      "start_period": 4,
+      "duration": 1
+    },
+    {
+      "session_id": "S0015",
+      "class_name": "Class 02",
+      "subject_code": "MTH",
+      "teacher_name": "Teacher 01",
+      "room_name": "Room 01",
+      "day": "Mon",
+      "start_period": 5,
+      "duration": 1
+    },
+    {
+      "session_id": "S0016",
+      "class_name": "Class 02",
+      "subject_code": "MTH",
+      "teacher_name": "Teacher 06",
+      "room_name": "Room 02",
+      "day": "Tue",
+      "start_period": 2,
+      "duration": 1
+    },
+    {
+      "session_id": "S0017",
+      "class_name": "Class 02",
+      "subject_code": "PRG",
+      "teacher_name": "Teacher 02",
+      "room_name": "Room 01",
+      "day": "Wed",
+      "start_period": 0,
+      "duration": 1
+    },
+    {
+      "session_id": "S0018",
+      "class_name": "Class 02",
+      "subject_code": "PRG",
+      "teacher_name": "Teacher 02",
+      "room_name": "Room 01",
+      "day": "Wed",
+      "start_period": 1,
+      "duration": 1
+    },
+    {
+      "session_id": "S0019",
+      "class_name": "Class 03",
+      "subject_code": "DBS",
+      "teacher_name": "Teacher 01",
+      "room_name": "Room 01",
+      "day": "Mon",
+      "start_period": 0,
+      "duration": 1
+    },
+    {
+      "session_id": "S0020",
+      "class_name": "Class 03",
+      "subject_code": "DBS",
+      "teacher_name": "Teacher 01",
+      "room_name": "Room 01",
+      "day": "Mon",
+      "start_period": 1,
+      "duration": 1
+    },
+    {
+      "session_id": "S0021",
+      "class_name": "Class 03",
+      "subject_code": "MTH",
+      "teacher_name": "Teacher 06",
+      "room_name": "Room 02",
+      "day": "Mon",
+      "start_period": 4,
+      "duration": 1
+    },
+    {
+      "session_id": "S0022",
+      "class_name": "Class 03",
+      "subject_code": "MTH",
+      "teacher_name": "Teacher 06",
+      "room_name": "Room 02",
+      "day": "Mon",
+      "start_period": 5,
+      "duration": 1
+    },
+    {
+      "session_id": "S0023",
+      "class_name": "Class 03",
+      "subject_code": "PRG",
+      "teacher_name": "Teacher 02",
+      "room_name": "Room 01",
+      "day": "Wed",
+      "start_period": 2,
+      "duration": 1
+    },
+    {
+      "session_id": "S0024",
+      "class_name": "Class 03",
+      "subject_code": "PRG",
+      "teacher_name": "Teacher 02",
+      "room_name": "Room 01",
+      "day": "Wed",
+      "start_period": 4,
+      "duration": 1
+    }
+  ]
+}
